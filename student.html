@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student List</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background-color: lightgray;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .table-container {
+            width: 95%;
+            margin: 30px auto;
+            max-height: 400px;
+            overflow-y: auto;
+            overflow-x: auto;
+            background-color: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: blue;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 3px;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .edit-btn {
+            background-color: orange;
+        }
+
+        .delete-btn {
+            background-color: red;
+        }
+
+        .pagination {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .pagination button {
+            background-color: blue;
+        }
+
+        #pageNumber {
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <h1>Student List</h1>
+
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Name</th>
+
+                    <th>Age</th>
+
+                    <th>Course</th>
+
+                    <th>Email</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="student">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <div class="pagination">
+
+        <button onclick="previousPage()">
+            Previous
+        </button>
+
+
+        <span id="pageNumber">
+            Page 1
+        </span>
+
+
+        <button onclick="nextPage()">
+            Next
+        </button>
+
+    </div>
+
+
+    <script src="student.js"></script>
+
+</body>
+
+</html>
+

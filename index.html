@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Management</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background-color: lightgray;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            width: 450px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        .button-box {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .edit-btn {
+            background-color: orange;
+        }
+
+        .add-btn {
+            background-color: blue;
+        }
+
+        .update-btn {
+            background-color: green;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <h1>Student Management</h1>
+
+
+    <form id="studentForm">
+
+
+        <!-- ID -->
+
+        <label>ID:</label>
+
+        <input
+            type="number"
+            id="studentId"
+            placeholder="Enter Student ID"
+        >
+
+
+        <!-- EDIT BUTTON -->
+
+        <div class="button-box">
+
+            <button
+                type="button"
+                class="edit-btn"
+                onclick="editStudent()"
+            >
+                Edit
+            </button>
+
+        </div>
+
+
+        <br>
+
+
+        <!-- NAME -->
+
+        <label>Name:</label>
+
+        <input
+            type="text"
+            id="name"
+            required
+        >
+
+
+        <br>
+
+
+        <!-- AGE -->
+
+        <label>Age:</label>
+
+        <input
+            type="number"
+            id="age"
+            required
+        >
+
+
+        <br>
+
+
+        <!-- COURSE -->
+
+        <label>Course:</label>
+
+        <select
+            id="course"
+            onchange="showOtherCourse()"
+            required
+        >
+
+            <option value="">SELECT COURSE</option>
+
+            <option value="CSE">CSE</option>
+
+            <option value="IT">IT</option>
+
+            <option value="ECE">ECE</option>
+
+            <option value="EEE">EEE</option>
+
+            <option value="MECH">MECH</option>
+
+            <option value="Others">Others</option>
+
+        </select>
+
+
+        <!-- OTHER COURSE -->
+
+        <div
+            id="otherCourseBox"
+            style="display: none;"
+        >
+
+            <label>Enter Course:</label>
+
+            <input
+                type="text"
+                id="otherCourse"
+                placeholder="Type your course"
+            >
+
+        </div>
+
+
+        <br>
+
+
+        <!-- EMAIL -->
+
+        <label>Email:</label>
+
+        <input
+            type="email"
+            id="email"
+            required
+        >
+
+
+        <!-- BUTTONS -->
+
+        <div class="button-box">
+
+            <button
+                type="submit"
+                id="addButton"
+                class="add-btn"
+            >
+                Add Student
+            </button>
+
+
+            <button
+                type="button"
+                id="updateButton"
+                class="update-btn"
+                onclick="updateStudent()"
+            >
+                Update Student
+            </button>
+
+        </div>
+
+
+    </form>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
