@@ -1,3 +1,4 @@
+const API_URL = "https://student-management-production-09a1.up.railway.app";
 let editingId = null;
 
 
@@ -7,7 +8,6 @@ let editingId = null;
 
 function showOtherCourse() {
 
-    const API_URL = "https://student-management-production-09a1.up.railway.app";
 
     const course =
         document.getElementById("course").value;
@@ -65,7 +65,7 @@ document
 
 
         const response = await fetch(
-            "${API_URL}/student/",
+            `${API_URL}/student/`,
             {
                 method: "POST",
 
