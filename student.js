@@ -9,8 +9,10 @@ async function getStudents() {
 
     try {
 
+        const API_URL = "https://student-management-production-09a1.up.railway.app";
+
         const response = await fetch(
-            `http://127.0.0.1:8000/student/students?page=${currentPage}&limit=${limit}`
+            `${API_URL}/student/students?page=${currentPage}&limit=${limit}`
         );
 
 
@@ -116,7 +118,7 @@ async function deleteStudent(id) {
 
 
     const response = await fetch(
-        `http://127.0.0.1:8000/student/${id}`,
+        `${API_URL}/${id}`,
         {
             method: "DELETE"
         }

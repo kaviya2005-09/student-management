@@ -7,6 +7,8 @@ let editingId = null;
 
 function showOtherCourse() {
 
+    const API_URL = "https://student-management-production-09a1.up.railway.app";
+
     const course =
         document.getElementById("course").value;
 
@@ -63,7 +65,7 @@ document
 
 
         const response = await fetch(
-            "http://127.0.0.1:8000/student/",
+            "${API_URL}/student/",
             {
                 method: "POST",
 
@@ -135,7 +137,7 @@ async function editStudent() {
 
 
     const response = await fetch(
-        `http://127.0.0.1:8000/student/${id}`
+        `${API_URL}/student/${id}`
     );
 
 
@@ -271,7 +273,7 @@ async function updateStudent() {
 
 
     const response = await fetch(
-        `http://127.0.0.1:8000/student/${editingId}`,
+        `${API_URL}/student/${editingId}`,
         {
             method: "PUT",
 
@@ -351,7 +353,7 @@ window.addEventListener("DOMContentLoaded", async function () {
     }
 
     const response = await fetch(
-        `http://127.0.0.1:8000/student/${id}`
+        `${API_URL}/student/${id}`
     );
 
     if (!response.ok) {
